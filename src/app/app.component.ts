@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Proyecto';
+  title = 'This';
+  magicNumber = 4;
+  saludo = 'Hola soy una propiedad de la clase AppComponent ubicada en el componente ts. :)'
 }

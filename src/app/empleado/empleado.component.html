@@ -1,0 +1,81 @@
+<table class="dron">
+    <p>Juan</p>
+    <p>Juan</p>
+    <p>Juan</p>
+    <p>Juan</p>
+</table>
+<table class="zas">
+    <p>Ramiro</p>
+    <p>Ramiro</p>
+    <p>Ramiro</p>
+    <p>Ramiro</p>
+</table>
+<ul>
+    <p>Nombre del empleado: {{nombre}}</p>
+<p>apellido del empleado: {{apellido}}</p>
+<!-- <p>Edad del empleado: {{getEdad()}}</p> -->
+<p>Edad del empleado: {{edad.value}}</p>
+
+
+
+<p>Empresa del empleado: {{empresa.value}}</p>
+</ul>
+
+<hr>
+<hr>
+(evento click)
+Introduce la empresa:
+
+<input type="text" #empresa>
+
+<br>
+<br>
+<!-- biding -->
+<input type="button" value="Actualizar" (click)="llamarEmpresa(empresa.value)">
+
+
+<hr>
+
+(evento KeyUp)
+
+escriba su nueva edad
+<input type="number" #edad (keyup)="0" [disabled]="habilitacionCuadro">
+
+
+<br>
+<br>
+
+{{textoDeRegistro}}
+<br>
+
+
+Registrado: <input type="checkbox" name="" id="registro" [checked]="usuarioRegistrado">
+{{getRegistroUsuario()}}
+<br><br>
+<!-- events biding -->
+
+<!-- Registro: <input type="checkbox" name="" id="registrate" (mouseover)="setRegistroUsuario()"> -->
+<!-- el mouse over es un evento  -->
+
+
+
+
+<!-- otro ejemple de los eventos -->
+
+
+
+
+<!--ejemplo mas complejo-->
+<br><br>
+
+<!-- Ejemplo complejo: <input type="radio" name="nRegistro" id="registross" [checked]="usuarioRegistrado" (click)="setRegistroUsuario()"><br>
+
+complejo: <input type="radio" name="nRegistro" id="registross" [checked]="usuarioRegistrado" (click)="setNoRegistrado()"> -->
+
+
+<br>
+<br>
+<!-- agregamos la propiedad value en los dos checkbox -->
+Registrado :<input type="radio" value="si" name="nRegistro" id="registross" [checked]="usuarioRegistrado" (click)="setRegistroUsuario($event)"><br>
+
+No registrado: <input type="radio" value="no" name="nRegistro" (click)="setRegistroUsuario($event)">
